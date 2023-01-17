@@ -1,6 +1,7 @@
 import { Request } from 'express';
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
+const { Schema, model } = require('mongoose');
 
 export interface IUserRequest extends Request {
     user?: any
@@ -75,6 +76,8 @@ UserSchema.methods.comparePassword = function(entredPassword: string) {
     return bcrypt.compareSync(entredPassword, user.password);
 }
 
-const User = mongoose.model<IUser>("User", UserSchema);
+const User  = module.exports = model('convuser', UserSchema);
+
+// const User = mongoose.model<IUser>("User", UserSchema);
 
 export default User;

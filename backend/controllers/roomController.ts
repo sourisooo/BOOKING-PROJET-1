@@ -19,9 +19,12 @@ export const getAll = asyncHandler(async(req: Request, res: Response) => {
     }
     : {};
 
+
     const numOfBeds = req.query.numOfBeds ? {numOfBeds: req.query.numOfBeds} : {};
 
     const category = req.query.roomType ? {category: req.query.roomType} : {};
+
+
 
     const count = await Room.countDocuments({ ...keyword, ...numOfBeds, ...category })
 
@@ -34,6 +37,30 @@ export const getAll = asyncHandler(async(req: Request, res: Response) => {
         count
     });
 })
+
+
+// router.get('/', async (req, res) => {
+//     const query = req.query;
+//     try {
+//       const rooms = await Room.find();
+//       if (Object.keys(query).length > 0) {
+//         const filteredRooms = await filterRooms(rooms, query);
+//         return res.status(200).send(filteredRooms);
+//       }
+  
+//       res.status(200).send(rooms);
+//     } catch (error) {
+//       console.log(error);
+//       res.status(500).json({
+//         message: 'На сервере произошла ошибка. Попробуйте позже',
+//       });
+//     }
+//   });
+
+
+
+
+
 
 // @Desc Search rooms
 // @Route /api/rooms/search/
@@ -121,12 +148,12 @@ export const createRoomReview = asyncHandler(async (req: IUserRequest, res: Resp
 
     if(room) {
 
-        const alreadyReviewd = room.reviews?.find(review => review.user.toString() === req.user._id.toString());
+        // const alreadyReviewd = room.reviews?.find((review: { user: { toString: () => any; }; }) => review.user.toString() === req.user._id.toString());
 
-        if(alreadyReviewd) {
-            res.status(401);
-            throw new Error("Already reviewed");
-        }
+        // if(alreadyReviewd) {
+        //     res.status(401);
+        //     throw new Error("Already reviewed");
+        // }
 
         const { rating, comment } = req.body;
 
@@ -153,3 +180,68 @@ export const createRoomReview = asyncHandler(async (req: IUserRequest, res: Resp
     }
 
 })
+
+//   router.post('/', auth, async (req, res) => {
+//     try {
+//       const newReview = await Review.create({
+//         ...req.body,
+//         userId: req.user._id,
+//       });
+//       res.status(201).send(newReview);
+//     } catch (error) {
+//       res.status(500).json({
+//         message: 'На сервере произошла ошибка. Попробуйте позже',
+//       });
+//     }
+//   });
+
+
+
+
+
+// router.get('/', async (req, res) => {
+//     try {
+//       const { orderBy, equalTo } = req.query;
+//       const reviews = await Review.find({ [orderBy]: equalTo });
+//       res.status(200).send(reviews);
+//     } catch (error) {
+//       res.status(500).json({
+//         message: 'На сервере произошла ошибка. Попробуйте позже',
+//       });
+//     }
+//   });
+  
+
+  
+//   router.patch('/:reviewId', auth, async (req, res) => {
+//     try {
+//       const { reviewId } = req.params;
+//       const updatedReview = await Review.findByIdAndUpdate(reviewId, req.body, { new: true });
+//       res.send(updatedReview);
+//     } catch (error) {
+//       res.status(500).json({
+//         message: 'На сервере произошла ошибка. Попробуйте позже',
+//       });
+//     }
+//   });
+  
+//   router.delete('/:reviewId', auth, async (req, res) => {
+//     try {
+//       const { reviewId } = req.params;
+//       const removedReview = await Review.findById(reviewId);
+//       if (removedReview.userId.toString() === req.user._id || req.userRole === 'admin') {
+//         await removedReview.remove();
+//         return res.send(null);
+//       } else {
+//         res.status(401).json({
+//           message: 'Unauthorized',
+//         });
+//       }
+//     } catch (error) {
+//       res.status(500).json({
+//         message: 'На сервере произошла ошибка. Попробуйте позже',
+//       });
+//     }
+//   });
+  
+//   module.exports = router;

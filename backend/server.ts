@@ -10,7 +10,9 @@ import { errorHandler, notFound } from './middlewares/errorMiddleware';
 import roomRoutes from './routes/roomRoutes';
 import userRoutes from './routes/userRoutes';
 import bookingRoutes from './routes/bookingRoutes';
-import uploadRoutes from './routes/uploadRoutes';
+import reviewRoutes from './routes/bookingRoutes';
+// import uploadRoutes from './routes/uploadRoutes';
+
 
 const app: Application = express();
 
@@ -21,12 +23,26 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+// app.use('/', express.static(path.join(__dirname, '../frontend/public')));
 
 // Default 
 app.get("/api", (req: Request, res: Response)  => {
+
     res.status(201).json({ message: "Welcome to Hotel Booking App" });
+  
+
 })
+
+// const indexPath = path.join(__dirname, '../frontend/public', 'index.html');
+
+// app.get('*', (req, res) => {
+//   res.sendFile(indexPath);
+// });
+
+
+
+
 
 // Room Route
 app.use("/api/rooms", roomRoutes);
@@ -37,8 +53,10 @@ app.use("/api/users", userRoutes);
 // Booking Route
 app.use("/api/bookings", bookingRoutes);
 
+app.use("/api/rooms/:roomId/reviews", reviewRoutes);
+
 // Upload Route
-app.use("/api/uploads", uploadRoutes);
+// app.use("/api/uploads", uploadRoutes);
 
 app.get("/api/config/paypal", (req, res) => {
   res.status(201).send(process.env.PAYPAL_CLIENT_ID);

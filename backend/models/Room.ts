@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+const { Schema, model } = require('mongoose');
 
 interface IReviews {   
     user: string,
@@ -36,12 +37,12 @@ const RoomSchema = new mongoose.Schema({
 
     name: {
         type: String,
-        required: true
+  
     },
 
     description: {
         type: String,
-        required: true
+     
     },
 
     images: [
@@ -52,22 +53,22 @@ const RoomSchema = new mongoose.Schema({
 
     pricePerNight: {
         type: Number,
-        required: true,
+    
     },
 
     address: {
         type: String,
-        required: true,
+      
     },
 
     guestCapacity: {
         type: Number,
-        required: true,
+   
     },
 
     numOfBeds: {
         type: Number,
-        required: true,
+  
     },
 
     internet: {
@@ -107,28 +108,28 @@ const RoomSchema = new mongoose.Schema({
 
     category: {
         type: String,
-        required: true,
+    
         enum: ['King', 'Single', 'Twins']
     },
 
     reviews: [
         {
             user: {
-                type: mongoose.Types.ObjectId,
+                type: Schema.Types.ObjectId,
                 ref: 'User',
-                required: true
+              
             },
             name: {
                 type: String,
-                required: true,
+             
             },
             rating: {
                 type: Number,
-                required: true
+           
             },
             comment: {
                 type: String,
-                required: true
+           
             }
         }
     ],
@@ -136,13 +137,13 @@ const RoomSchema = new mongoose.Schema({
     user: {
         type: mongoose.Types.ObjectId,
         ref: 'User',
-        required: true
+    
     },
 
 }, {
     timestamps: true
 });
 
-const Room = mongoose.model<IRoom>("Room", RoomSchema);
+const Room = mongoose.model("convrooms", RoomSchema);
 
 export default Room;

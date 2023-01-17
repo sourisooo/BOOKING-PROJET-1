@@ -1,0 +1,229 @@
+[
+
+
+  {
+   
+    "name": "55", 
+    "description": "exemple1",
+
+    "images": [
+        "https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "https://images.unsplash.com/photo-1584132905271-512c958d674a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      ],
+
+    "pricePerNight": 5000,
+
+    "address": "randomadress",
+
+    "guestCapacity": 2,
+
+    "numOfBeds": 2,
+
+    "internet": true,
+
+    "breakfast": true,
+
+    "airConditioned": true,
+
+    "petsAllowed": true,
+
+    "roomCleaning": true,
+
+    "ratings": 99,
+
+    "numOfReviews": 55,
+
+    "category": "King",
+
+    "reviews": [
+        {
+           "user": "User",
+              
+  
+            "name": "Username",
+
+        
+            "rating": 500,
+
+            "comment": "Good"
+        }
+    ],
+
+    "user": "Users"
+
+
+
+  },
+
+
+
+  {
+   
+    "name": "66", 
+    "description": "exemple2",
+
+    "images": [
+        "https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "https://images.unsplash.com/photo-1584132905271-512c958d674a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      ],
+
+    "pricePerNight": 5040,
+
+    "address": "randomadress",
+
+    "guestCapacity": 2,
+
+    "numOfBeds": 2,
+
+    "internet": true,
+
+    "breakfast": true,
+
+    "airConditioned": true,
+
+    "petsAllowed": true,
+
+    "roomCleaning": true,
+
+    "ratings": 994,
+
+    "numOfReviews": 554,
+
+    "category": "King",
+
+    "reviews": [
+        {
+           "user": "User4",
+              
+  
+            "name": "Username",
+
+        
+            "rating": 5040,
+
+            "comment": "Good"
+        }
+    ],
+
+    "user": "Users"
+
+
+
+  },
+
+
+  
+  {
+   
+    "name": "101", 
+    "description": "exemple3",
+
+    "images": [
+        "https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "https://images.unsplash.com/photo-1584132905271-512c958d674a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      ],
+
+    "pricePerNight": 46,
+
+    "address": "randomadress",
+
+    "guestCapacity": 2,
+
+    "numOfBeds": 5,
+
+    "internet": true,
+
+    "breakfast": true,
+
+    "airConditioned": true,
+
+    "petsAllowed": true,
+
+    "roomCleaning": true,
+
+    "ratings": 99,
+
+    "numOfReviews": 55,
+
+    "category": "Twins",
+
+    "reviews": [
+        {
+           "user": "User",
+              
+  
+            "name": "Username",
+
+        
+            "rating": 500,
+
+            "comment": "Good"
+        }
+    ],
+
+    "user": "UsersGuest"
+
+
+
+  },
+
+
+  {
+   
+    "name": "205", 
+    "description": "exemple4",
+
+    "images": [
+        "https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "https://images.unsplash.com/photo-1584132905271-512c958d674a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      ],
+
+    "pricePerNight": 400,
+
+    "address": "randomadress",
+
+    "guestCapacity": 2,
+
+    "numOfBeds": 2,
+
+    "internet": true,
+
+    "breakfast": true,
+
+    "airConditioned": true,
+
+    "petsAllowed": true,
+
+    "roomCleaning": true,
+
+    "ratings": 99,
+
+    "numOfReviews": 55,
+
+    "category": "Single",
+
+    "reviews": [
+        {
+           "user": "Admin",
+              
+  
+            "name": "Admin",
+
+        
+            "rating": 900,
+
+            "comment": "amazing"
+        }
+    ],
+
+    "user": "Admin"
+
+
+
+  }
+  
+]
