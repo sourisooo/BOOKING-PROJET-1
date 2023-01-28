@@ -81,3 +81,10 @@ const User  = module.exports = model('convuser', UserSchema);
 // const User = mongoose.model<IUser>("User", UserSchema);
 
 export default User;
+
+//Commentaires
+//The next() call does not stop the rest of the code in your middleware function from executing. Use the 
+//early return pattern to prevent the rest of your middleware function from running when you call next().
+//Les actions réalisées lorsque le hook est actif consiste à crypter le mot de passe par bcrypt.
+//Par ailleurs, une méthode est crée au sein du schema user:comparePassword permettant de comparer un string
+//en entrée de fonction avec le user.password.

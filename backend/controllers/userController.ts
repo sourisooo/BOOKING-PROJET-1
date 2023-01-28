@@ -199,3 +199,28 @@ export const deleteUser = asyncHandler(async (req: Request, res: Response) => {
   res.status(201).json({});
 
 })
+
+//Commentaires
+//La feuille de code gère toutes les requetes réaliséees au serveur sur l'adresse /api/users et portant sur
+//l'array d'objet user. asyncHandler permet de gèrer les erreurs avec express. 
+//La constante register stocke le resultat d'une fonction asychrone. Cete fonction asyncrhone prend en entrée deux objets requetes
+//et réponse. Le paramètre body de l'objet requete est spécifiée. Un nouvel objet User est crée dans l'array de type Mongoose en tenant
+//compte des valeurs des paramètres de la requete. Une réponse est envoyé au client en envoyant la valeur de différentes variables précitées.
+//La constante login stocke le resultat d'une fonction asychrone. Cete fonction asyncrhone prend en entrée deux objets requetes
+//et réponse. Le paramètre body de l'objet requete est spécifiée. Une recherche est réalisé dans l'array user de type moongoose puis
+//divers méthodes sont utilisées depuis la bibliothèque bcrypt pour comparer et valider l'authentification. Une fois l'authentification validée,
+//une réponse est envoyée au client en envoyant différents paramètres/variables au format JSON.
+////La constante updateprofil stocke le resultat d'une fonction asychrone. Cete fonction asyncrhone prend en entrée deux objets requetes
+//et réponse. Une recherche es faite sur l'objet user, le body de la requete est spécifiée. Une nouvelle recherche est réalisée sur le user puis
+//une modification des variables est opéré sur l'objet trouvé par la recherche en tenant compte des paramètres de la requete.
+//Puis une réponse est envoyée au client en envoyant les paramètres précités.
+//Meme chose concernant updatePassword, la différence par rapport à updateprofil tient au fait que les paramètres de body de la requete différe et
+//de l'appel de la bibliothèque bcrypt pour crypter le nouveau password.
+//La constante getAll stocke le resultat d'une fonction asychrone. Cete fonction asyncrhone prend en entrée deux objets requetes
+//et réponse. Une recherche est faite sur l'array d'objet user puis une mise en page est réalisée sur cette recherche pour sortir
+//les objets par 4. Une réponse au client est envoyée en envoyant les différents paramètres précitées en format JSON.
+//Meme chose pour getSingleUser par rapport à getall étantp précisé que la variable "password" est ajouté ou retiré du résultat de la recherche.
+//Meme chose pour updateUser par rapport à getall, différence résidant dans l'usage de la méthode implémentée mongoose findByIdAndUpdate pour 
+//modifier certains paramètres de l'objet trouvé par la recherche.
+//Meme chose pour deleteUser par rapport à getall, différence résidant dans l'usage de la méthode implémentée mongoose findByIdAndDelete et d'une
+//réponse envoyée au client en envoyant un objet vide{}.

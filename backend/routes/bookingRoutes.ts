@@ -14,3 +14,9 @@ router.route("/dates/:roomId").get(getBookedDates);
 router.route("/:id").delete(deleteBooking);
 
 export default router;
+
+//Commentaires
+//La feuille de code configure les routes relatives à toutes les requetes réalisées au serveur.
+//Toutes les requetes POST, GET, DELETE sont paramétrés dans la feuille de code puis l'objet ou l'array d'objet de la méthode
+//est déterminé par la feuille de code bookingController. Ces requetes sont exécuté en fonction de la racine de l'adresse
+//HTML (ex: "/", "/check").

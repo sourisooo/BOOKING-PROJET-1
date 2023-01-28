@@ -148,12 +148,12 @@ export const createRoomReview = asyncHandler(async (req: IUserRequest, res: Resp
 
     if(room) {
 
-        // const alreadyReviewd = room.reviews?.find((review: { user: { toString: () => any; }; }) => review.user.toString() === req.user._id.toString());
+        const alreadyReviewd = room.reviews?.find((review: { user: { toString: () => any; }; }) => review.user.toString() === req.user._id.toString());
 
-        // if(alreadyReviewd) {
-        //     res.status(401);
-        //     throw new Error("Already reviewed");
-        // }
+        if(alreadyReviewd) {
+            res.status(401);
+            throw new Error("Already reviewed");
+        }
 
         const { rating, comment } = req.body;
 
@@ -181,67 +181,30 @@ export const createRoomReview = asyncHandler(async (req: IUserRequest, res: Resp
 
 })
 
-//   router.post('/', auth, async (req, res) => {
-//     try {
-//       const newReview = await Review.create({
-//         ...req.body,
-//         userId: req.user._id,
-//       });
-//       res.status(201).send(newReview);
-//     } catch (error) {
-//       res.status(500).json({
-//         message: 'На сервере произошла ошибка. Попробуйте позже',
-//       });
-//     }
-//   });
-
-
-
-
-
-// router.get('/', async (req, res) => {
-//     try {
-//       const { orderBy, equalTo } = req.query;
-//       const reviews = await Review.find({ [orderBy]: equalTo });
-//       res.status(200).send(reviews);
-//     } catch (error) {
-//       res.status(500).json({
-//         message: 'На сервере произошла ошибка. Попробуйте позже',
-//       });
-//     }
-//   });
-  
-
-  
-//   router.patch('/:reviewId', auth, async (req, res) => {
-//     try {
-//       const { reviewId } = req.params;
-//       const updatedReview = await Review.findByIdAndUpdate(reviewId, req.body, { new: true });
-//       res.send(updatedReview);
-//     } catch (error) {
-//       res.status(500).json({
-//         message: 'На сервере произошла ошибка. Попробуйте позже',
-//       });
-//     }
-//   });
-  
-//   router.delete('/:reviewId', auth, async (req, res) => {
-//     try {
-//       const { reviewId } = req.params;
-//       const removedReview = await Review.findById(reviewId);
-//       if (removedReview.userId.toString() === req.user._id || req.userRole === 'admin') {
-//         await removedReview.remove();
-//         return res.send(null);
-//       } else {
-//         res.status(401).json({
-//           message: 'Unauthorized',
-//         });
-//       }
-//     } catch (error) {
-//       res.status(500).json({
-//         message: 'На сервере произошла ошибка. Попробуйте позже',
-//       });
-//     }
-//   });
-  
-//   module.exports = router;
+//Commentaires
+//La feuille de code gère toutes les requetes réaliséees au serveur sur l'adresse /api/rooms et portant sur
+//l'array d'objet room. asyncHandler permet de gèrer les erreurs avec express. 
+//La constante getall stocke le resultat d'une fonction asychrone. Cete fonction asyncrhone prend en entrée deux objets requetes
+//et réponse. La méthode query permet de préciser la requete vers une variable/paramètre spécifique de l'objet en entrée de fonction
+//asynchrone ou spécifier une nouvelle variable de l'objet de type Request implémentée Express (à vérifier).
+//What is a regex in JavaScript?
+//Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. 
+//These patterns are used with the exec() and test() methods of RegExp , and with the match() , matchAll() , replace() , replaceAll() , search() , 
+//and split() methods of String . La variable keyword vérifie si le paramètre keyword est existant, si oui, une vérification est faite
+//dans les paramètres name et description pour vérifier la présente de keyword dans ses 2 paramètres.
+//Deux nouveux paramètres/variables sont définis: numOfBeds et category. Dans le cas, ou la requete spécifie une valeur pour cette variable, la valeur
+//est récupérée, sinon la variable est affectée par une valeur vide//nulle.
+//Une recherche est réalisée dans l'array d'objet room en fonction de certains paramètres de la requete puis une réponse est
+//envoyée au client en envoyant l'array d'objet ainsi que ces paramètres.
+//La constante searchRooms stocke le resultat d'une fonction asychrone. Cete fonction asyncrhone prend en entrée deux objets requetes
+//et réponse. Une recherche est réalisé dans l'arrauy d'objet room en tenant comptes de plusieurs paramètres puis les objets trouvés sont
+//envoyées en format json au client.
+//Meme chose pour getSingle mais en utilisant params(accéder à un paramètre//variable existant).
+//Meme chose pour addroom, deleteroom, updateroom mais en utilisant la méthode create pour créer un nouvel objet room dans l'array de type schema 
+//implémentée Mongoose, findByIdAndUpdate et findByIdAndDelete précisant que les deux dernière une recherche est réalisée pour vérifier l'existence
+//de l'objet.
+//La constante createRoomReview stocke le resultat d'une fonction asychrone. Cete fonction asyncrhone prend en entrée deux objets requetes
+//et réponse. Une recherche est réalisé dans l'array d'objet room en tenant comptes de plusieurs paramètres. Une recherche est faite sur l'objet
+//room trouvé pour rechercher les reviews en tenant compte de le user_id de l'objet requete. Les paramètres/variables de la requetes sont 
+// insérée à l'intérieur de la variable review. Puis l'objet review est inséré dans la collection d'objet review puis un message de validation
+//est envoyée au client.
