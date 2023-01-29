@@ -62,3 +62,10 @@ const MyBookingsScreen = () => {
 };
 
 export default MyBookingsScreen;
+
+//Commentaires
+//La constante MyBookingsScreen stocke une fonction retournant un template HTML dynamique.
+//L'accès aux data se fait par useSelector en prenant pour entrée n'importe quel reducer de l'app et retourne
+//le scenarii BookingsMy. Etant précisé qu'il est préférable d'utiliser un hook et un accès via un rootsapp
+//(createstore de store). Par ailleurs, useEffect est paramétré de tel manière à ce que le scénarii
+//getMyBookings soit utiliser à chaque utilisation d'un reducer.

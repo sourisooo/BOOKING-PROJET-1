@@ -138,3 +138,9 @@ export const roomDeleteReducer = (state = {}, action: AnyAction) => {
             return state;
     }
 }
+
+//Commentaires
+//La feuilles de code paramètre et définit plusieurs scénariis pour son reducer. Les fonctions prennent pour entrée
+//une objet vide, un array d'objet room de type IRoom vide, un objet room vide. Suivant le type d'action (2ème paramètre),
+//un scénarii est activé, précisant les valeurs que doivent prendre les variables et paramètre. Le payload est défini
+//lors de l'appel du reducer et de son scenarii.

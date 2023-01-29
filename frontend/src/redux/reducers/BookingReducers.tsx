@@ -145,3 +145,11 @@ export const bookingDeleteReducer = (state = {}, action: AnyAction) => {
     }
 
 }
+
+//Commentaires
+//La feuille de code définit plusieurs scenaris pour son reducer booking. Chaque scénariis prend en entrée
+//une variable//un objet et une action ou payload. Chaque scénarii prévoit une configuration spécifique
+//des paramètres de l'objet pris en entrée de fonction. Cette feuille de code utilise la version
+//classique de redux contraitement au projet reactbooking utilisant reduxkittool dans lequel une spécification
+//de l'objet et de ses paramètres est réalisée lors de la création de la slice. De cette différence, l'objet et ses
+//paramètres devront etre définis lors de l'appels de fonction.
