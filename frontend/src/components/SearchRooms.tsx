@@ -66,3 +66,12 @@ const SearchRooms: React.FC<SearchRoomsParams> =
 };
 
 export default SearchRooms;
+
+//Commentaires
+//Un type est crée de manière à concatener 3 paramètres useState dans un seul type.
+//La fonction SearchRooms prend pour entrée le nouveau type de donnée crée. La spécification
+//React.Dispatch<React.SetStateAction<string>> permet de modifier la valeur d'une variable en
+//utiisant la methode SET correspondante de la meme manière que useState.
+//La fonction SearchRooms retourne un formulaire avec 3 champs: search, num of bed et rometype.
+//Chaque saisie de clavier sur ces masques de saisies viennent modifier la valeur de la variable
+//spécifiée dans le type SearchRoomsParams.

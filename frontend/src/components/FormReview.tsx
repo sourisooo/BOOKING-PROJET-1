@@ -80,3 +80,15 @@ const FormReview: React.FC<TFormReview> = ({ idRoom }) => {
 };
 
 export default FormReview;
+
+//Commentaires
+//La FormReview prend pour entrée un type d'objet IRoom['_id'], invoque la fonction useAuthStatus
+//pour accéder à la variable loggedIn. Puis, trois variables sont crées en utilisant la fonctionnalité
+//useState de react. La fonction handleReview prend pour entrée FormEvent(masque de saisie, A form event 
+//in JavaScript gets triggered when a user loses focus, or in a sense, the user wants to make modifications to the form control value)
+//La fonction handlereview utilise le reducer createRoomReview en prenant comme paramètre l'objet passé dans la
+//première fonction et deux variables useState.
+//La fonction FormReview retourne une template HTML en utilisant les variables/paramètres/objets et fonctions précitées.
+//La soumission du formulaire va executer la fonction handlereview et envoyer la requete POST auprès du serveur.
+//L'interaction avec les boutons type="button" et le formgroupe va modifier la valeur des variables utilisant UseState à
+//travers la méthode SET.

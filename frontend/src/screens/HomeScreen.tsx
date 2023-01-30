@@ -72,3 +72,11 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+
+//Commentaires
+//La fonction HomeScreen spécifie plusieurs paramètres utilisant la fonctionnalité useState. Ces paramètres vont etre
+//utiliser ultérieurement dans les composants (ex: searchrooms) en étant appelé dans ses composants avec 
+//React.Dispatch<React.SetStateAction<string>>. L'incrémentation des données est réalisé directement dans les composants
+//en utilisant les paramètres SET. Ensuite, la feuille code home va concatener toutes variables actualisées par les composants
+//(paginate,roomcard et searchroom principalement).
+//La fonction HomeScreen retourne un template HTML en utilisant les paramètres/variables et objets et fonctions précedemment cités.

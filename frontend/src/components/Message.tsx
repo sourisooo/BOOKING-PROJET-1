@@ -15,3 +15,7 @@ Message.defaultProps = {
 }
 
 export default Message;
+
+//Commentaires
+//La fonction prend pour entrée un string et un objet non défini et retourne un string
+//contenant le string et l'objet.

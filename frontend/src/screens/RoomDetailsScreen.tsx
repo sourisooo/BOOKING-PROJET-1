@@ -247,3 +247,25 @@ const RoomDetailsScreen = () => {
 };
 
 export default RoomDetailsScreen;
+
+//Commentaires
+//La fonction RoomDetailsScreen invoque la fonction useAuthStatus pour la destructurer et utiliser et accéder ses paramètres.
+//Plusieurs variables utilisant la fonctionnalité useState de react sont spécifiées. Puis plusieurs reducers sont invoquées
+//puis destructurer pour accéder et utiliser leurs paramètres, ces reducers étant roomDetails, roomCreateReview,
+//roomBookingCheck, bookingCreate, bookedDates.
+//La fonctionnalité useEffect est utilisée de tel manière à chaque usage d'un reducer ou de la modification d'un id, les fonctions
+//utilisant les ressources du reducer sont utilisés tel que les fonctions getRoomDetails et getBookedDates et la réalisation
+//des deux scénariis dispatch({ type: CHECK_ROOM_BOOKING_RESET }), dispatch({ type: CREATE_BOOKING_RESET }). Le paramètre en entrée
+//de ses fonctions étant l'id de la room actuel, spécifiée par  const { id } = useParams<TId>().
+//La fonction onChange prend pour entrée de fonction une date, puis les variables checkin et checkout ont modifié à travers leurs
+//méthodes SET respectifs, l'affectation de l'entrée de fonction vers les méthodes SET étant rendu possible par la destructuration
+//de l'objet date. Puis le reducer checkRoomBooking est appelé en utilisant les paramètres précedemment cités.
+//La fonction successPaymentHandler prend pour entrée un objet non spécifié puis détermine les valeurs des variables de l'objet
+//paymentInfo tandis ce que les valeurs des variables de bookingData sont déterminés par les paramètres précedemment cités.
+//Puis un reducer, une fonction utilisant les ressource d'un reducer et deux scenariis de reducer sont appelés en utilsant
+//des variables ou paramètres précédemment déterminés.
+//La fonction RoomDetailsScreen retourne un template HTML en utilisant les paramètres précités ainsi que plusieurs composants
+//qui ont été déja été analysé dans leur feuille de code respectif: RoomFeatures, FormReview, ListReviews.
+//What is datepicker in JavaScript?
+//The JavaScript DatePicker (Calendar Picker) is a lightweight and mobile-friendly control that allows end users to enter or select a date value.
+// It has month, year, and decade view options to quickly navigate to the desired date.

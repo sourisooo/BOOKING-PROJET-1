@@ -20,3 +20,10 @@ export const useAuthStatus = () => {
     return { loggedIn, checkingStatus }
 
 }
+
+//Commentaires
+//La fonction useAuthStatus définit deux paramètres useState et un objet userInfo qui prend
+//l'information issue de state.userLogin étant précisé que state un reducer.
+//La fonctionnalité useEffet incrémente les valeurs de loggedIn et checkingStatus à chaque fois
+//que la variable userInfo est modifiée.
+//La fonction useAuthStatus retourne la valeur des variables loggedIn et checkingStatus.

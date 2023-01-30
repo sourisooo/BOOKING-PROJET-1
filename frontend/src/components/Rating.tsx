@@ -58,3 +58,4 @@ const Rating: React.FC<TReview> = ({ reviews }) => {
 };
 
 export default Rating;
+

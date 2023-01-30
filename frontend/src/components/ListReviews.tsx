@@ -23,3 +23,9 @@ const ListReviews: React.FC<TListReviews> = ({ roomReviews }) => {
 };
 
 export default ListReviews;
+
+//Commentaires
+//La fonction ListReviews spécifie un type de donnée et prend pour entrée ce type de donnée
+//nouvellement crée et retourne un template HTML en utilisant les paramètres et variables
+//précédemment citées et de l'objet passé en entrée de fonction. Pour chaque élément de l'array
+//roomReviews, les paramètre nom, rating et comment de l'objet sont affiché sur la page HTML.

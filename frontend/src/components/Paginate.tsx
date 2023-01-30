@@ -42,3 +42,11 @@ const Paginate: React.FC<PaginateParams> = ({ currentPage, setCurrentPage, total
 };
 
 export default Paginate;
+
+//Commentaires
+//La feuille de code spécifie un nouveau type de donnée, puis une fonction est crée en prenant pour entrée
+//un objet de type PaginateParams, type nouvellement crée. Un array est crée pour stocker une page pour un élément
+//de l'array. Par ailleurs, une variable de type react dispatch nommé setCurrentPage est utilisé prenant pour argument une action prenant lui meme
+//un argument de type number.
+//La fonction Paginate retourne un template HTML reprenant les variables précédemment citées.
+//Cette page HTML représente la navigation entre plusieurs pages sur le résultat de la recherche sur la page home.

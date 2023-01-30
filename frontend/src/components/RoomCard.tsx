@@ -29,3 +29,10 @@ const RoomCard: React.FC<IRoomCard> = (props: IRoomCard) => {
 };
 
 export default RoomCard;
+
+//Commentaires
+//Un nouveau type de donnée IRoom est spécifié à partir du type IRoomCard. La fonction RoomCard prend pour entrée
+//un objet de type IRoomCard, le destructure pour accéder et utiliser ses propriétés et variables.
+//La fonction retourne un template HTML utilisant les variables et objets précédemment cités, représentant
+//une chambre et plusieurs de ses charactéristiques.
+//

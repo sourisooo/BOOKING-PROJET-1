@@ -58,3 +58,8 @@ const RoomFeatures: React.FC<TRoomFeaturesProps> = ({ room }) => {
 };
 
 export default RoomFeatures;
+
+//Commentaires
+//La fonction RoomFeatures spécifie un type de donnée et prend pour entrée ce type de donnée
+//nouvellement crée et retourne un template HTML en utilisant les paramètres et variables
+//précédemment citées et de l'objet passé en entrée de fonction.
